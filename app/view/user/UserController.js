@@ -39,6 +39,7 @@ Ext.define("App.view.user.UserController", {
 		var msg = "确认删除用户：" + grid.getStore().getAt(rowIndex).get("userName") + " ？";
 		Ext.Msg.confirm("确认", msg, function(res) {
 			if(res == "yes") {
+                delRecord(grid.store().data.items[rowIndex].id);
 				grid.getStore().removeAt(rowIndex);
 			}
 		});
@@ -69,7 +70,9 @@ Ext.define("App.view.user.UserController", {
 		var fr = this.lookupReference("userForm").getForm();
 		if(fr.isValid()) {
 			var id = fr.findField("id").getValue();
+            var data = fr.getValues();
 			if(id) { //编辑
+                updateRecord(data);
 				var rec = this.st.getById(id);
 				rec.set("userName", fr.findField("userName").getValue());
 				rec.set("roleName", fr.findField("roleName").getValue());
@@ -78,6 +81,7 @@ Ext.define("App.view.user.UserController", {
 				//this.st.rejectChanges();	//取消所有修改
 				this.st.commitChanges();	//提交修改数据
 			}else { //新增
+                addRecord(data);
 				var obj = fr.getFieldValues();
 				obj.id = this.st.last() ? parseInt(this.st.last().get("id"))+1 : 1;
 				this.st.add(obj);
@@ -91,3 +95,50 @@ Ext.define("App.view.user.UserController", {
 		btn.up("userwin").close();
 	}
 });
+
+/**
+ * 更新
+ * @param data
+ */
+function updateRecord(data) {
+    Ext.Ajax.request({
+        url: '/user/update',
+        method: 'put',
+        jsonData: data,
+        success: function (response, options) {
+        },
+        failure: function () {
+        }
+    });
+}
+
+/**
+ * 新增
+ * @param data
+ */
+function addRecord(data) {
+    Ext.Ajax.request({
+        url: '/user/add',
+        method: 'post',
+        jsonData: data,
+        success: function (response, options) {
+        },
+        failure: function () {
+        }
+    });
+}
+/**
+ * 删除
+ * @param data
+ */
+function delRecord(id) {
+    Ext.Ajax.request({
+        url: '/user/del' + id,
+        method: 'delete',
+        params: id,
+        success: function (response, options) {
+        },
+        failure: function () {
+        }
+    });
+}
