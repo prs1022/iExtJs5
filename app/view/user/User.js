@@ -30,16 +30,12 @@ Ext.define("App.view.user.User", {
 				dataIndex: "userName",
 				flex: 1
 			}, {
-				text: "用户角色",
-				dataIndex: "roleName",
+				text: "角色",
+				dataIndex: "roleMark",
 				flex: 1,
 				renderer: function(val) {
-					if(val=="1") {
+					if(val=="root") {
 						return "超级管理员";
-					}else if(val=="2") {
-						return "管理员";
-					}else if(val=="3") {
-						return "网站编辑";
 					}
 					return val;
 				}

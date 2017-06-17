@@ -11,8 +11,7 @@ Ext.define("App.view.main.Bottom", {
 		Ext.apply(this, {
 			height: 24,
 			items: [{
-				xtype: "label",
-				text: "Copyright © 2016 某某科技有限公司 版权所有"
+				xtype: "label"
 			}]
 		});
 		this.callParent(arguments);

@@ -27,7 +27,7 @@ Ext.define("App.view.login.Login", {
 				items: [{
 					xtype: "image",
 					src: "img/logo.png",
-					height: 60,
+					height: 120,
 					cls: "login-logo"
 				}, {
 					xtype: "form",

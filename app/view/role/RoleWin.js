@@ -52,21 +52,8 @@ Ext.define("App.view.role.RoleWin", {
 						value: ""
 					}, {
 						xtype: "textfield",
-						name: "roleName",
+						name: "role",
 						fieldLabel: "角色名称"
-					}]
-				}, {
-					xtype: "container",
-					layout: {
-						type: "hbox",
-						align: "stretch"
-					},
-					items: [{
-						xtype: "textarea",
-						name: "roleDesc",
-						fieldLabel: "角色描述",
-						grow: false,
-						allowBlank: true
 					}]
 				}]
 			}],

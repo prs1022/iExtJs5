@@ -1,63 +1,127 @@
 {
-	"expanded": true,
-	"children": [{
-		"text": "首页",
-		"leaf": true,
-		"cls": "node-link",
-		"mod": "desktop",
-		"modUrl": "desktop.Desktop"
-	}, {
-		"text": "系统管理",
-		"expanded": true,
-		"cls": "node-link",
-		"children": [{
-			"text": "角色管理",
-			"leaf": true,
-			"cls": "node-link",
-			"mod": "role",
-			"modUrl": "role.Role"
-		}, {
-			"text": "用户管理",
-			"leaf": true,
-			"cls": "node-link",
-			"mod": "user",
-			"modUrl": "user.User"
-		}]
-	}, {
-		"text": "文章管理",
-		"expanded": true,
-		"children": [{
-			"text": "文章列表",
-			"leaf": true
-		}, {
-			"text": "发布文章",
-			"leaf": true
-		}]
-	}, {
-		"text": "产品管理",
-		"expanded": true,
-		"children": [{
-			"text": "产品列表",
-			"leaf": true
-		}, {
-			"text": "新增产品",
-			"leaf": true
-		}, {
-			"text": "产品监控",
-			"leaf": true
-		}]
-	}, {
-		"text": "报表管理",
-		"expanded": true,
-		"children": [{
-			"text": "生成报表",
-			"leaf": true
-		}, {
-			"text": "报表统计",
-			"leaf": true
-		}, {
-			"text": "报表打印",
-			"leaf": true
-		}]
-	}]
+  "expanded": true,
+  "children": [
+    {
+      "text": "首页",
+      "leaf": true,
+      "cls": "node-link",
+      "mod": "desktop",
+      "modUrl": "desktop.Desktop"
+    },
+    {
+      "text": "登录管理",
+      "expanded": true,
+      "children": [
+        {
+          "text": "用户列表",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "user",
+          "modUrl": "user.User"
+        },
+        {
+          "text": "角色列表",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "role",
+          "modUrl": "role.Role"
+        }
+      ]
+    },
+    {
+      "text": "产品管理",
+      "expanded": true,
+      "children": [
+        {
+          "text": "产品列表",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "product",
+          "modUrl": "product.Product"
+        },
+        {
+          "text": "报表列表",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "report",
+          "modUrl": "report.Report"
+        },
+        {
+          "text": "菜单列表",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "menu",
+          "modUrl": "menu.Menu"
+        },
+        {
+          "text": "参数列表",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "parameter",
+          "modUrl": "parameter.Parameter"
+        }
+      ]
+    },
+    {
+      "text": "过滤器管理",
+      "expanded": true,
+      "children": [
+        {
+          "text": "过滤器映射",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "reportfilter",
+          "modUrl": "reportfilter.ReportFilter"
+        },
+        {
+          "text": "list过滤器",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "listfilter",
+          "modUrl": "listfilter.ListFilter"
+        },
+        {
+          "text": "web过滤器",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "webfilter",
+          "modUrl": "webfilter.WebFilter"
+        },
+        {
+          "text": "date过滤器",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "datefilter",
+          "modUrl": "datefilter.DateFilter"
+        }
+      ]
+    },
+    {
+      "text": "消息类",
+      "expanded": true,
+      "children": [
+        {
+          "text": "应用内通知",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "announcement",
+          "modUrl": "announcement.Announcement"
+        },
+        {
+          "text": "设备号",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "devicetoken",
+          "modUrl": "devicetoken.DeviceToken"
+        },
+        {
+          "text": "app版本",
+          "leaf": true,
+          "cls": "node-link",
+          "mod": "appversion",
+          "modUrl": "appversion.AppVersion"
+        }
+      ]
+    }
+  ]
 }

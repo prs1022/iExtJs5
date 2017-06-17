@@ -9,7 +9,7 @@ Ext.define("App.store.User", {
 	model: "App.model.User",
 	proxy: {
 		type: "ajax",
-		url: "data/user.json", //模拟后台访问地址
+		url: window.BASEURL+"/user/all",//模拟后台访问
 		reader: {
 			type: "json",
 			rootProperty: "data"

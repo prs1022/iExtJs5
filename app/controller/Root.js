@@ -8,4 +8,7 @@ Ext.define("App.controller.Root", {
 	requires: [],
 	
 	onLaunch: function() {}
+
 });
+
+window.BASEURL="http://10.199.167.112:8085/mdp"

@@ -7,8 +7,6 @@ Ext.define("App.model.User", {
 	fields: [
 	    {name: "id"},
 	    {name: "userName"},
-	    {name: "roleName"},
-	    {name: "userState"},
-	    {name: "remark"}
+	    {name: "roleMark"},
 	]
 });

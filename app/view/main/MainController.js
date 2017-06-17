@@ -32,6 +32,7 @@ Ext.define("App.view.main.MainController", {
 	
 	//退出系统
 	exitSys: function() {
+		window.location.href="logout"
 		this.getView().destroy();
 		Ext.create("App.view.login.Login");
 	}

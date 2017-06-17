@@ -5,7 +5,7 @@
 Ext.define("App.view.user.UserModel", {
 	extend: "Ext.app.ViewModel",
 	alias: "viewmodel.user",
-	requires: ["App.store.User", "App.store.Role"],
+	requires: ["App.store.User"],
 	
 	data: {},
 	
